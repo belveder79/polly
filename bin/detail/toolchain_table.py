@@ -3,7 +3,7 @@
 # Copyright (c) 2017-2019, Robert Nitsch
 # Copyright (c) 2018-2019, David Hirvonen
 # Copyright (c) 2018-2019, Richard Hodges
-# Copyright (c) 2020, Clemens Arth
+# Copyright (c) 2020-2021, Clemens Arth
 # All rights reserved.
 
 import os
@@ -530,11 +530,16 @@ if platform.system() == 'Darwin':
       Toolchain('ios', 'Xcode'),
       Toolchain('ios-cxx17', 'Xcode'),
       Toolchain('ios-bitcode', 'Xcode'),
+      Toolchain('ios-14-5-dep-10-0-arm64', 'Xcode', ios_version='14.5'),
+      Toolchain('ios-14-5-dep-10-0-armv7', 'Xcode', ios_version='14.5'),
+      Toolchain('ios-14-5-dep-10-0-armv7s', 'Xcode', ios_version='14.5'),
+      Toolchain('ios-14-5-dep-10-0-device-cxx14', 'Xcode', ios_version='14.5'),
+      Toolchain('ios-14-5-dep-10-0-device-bitcode-cxx14', 'Xcode', ios_version='14.5'),
       Toolchain('ios-14-4-dep-10-0-arm64', 'Xcode', ios_version='14.4'),
       Toolchain('ios-14-4-dep-10-0-armv7', 'Xcode', ios_version='14.4'),
       Toolchain('ios-14-4-dep-10-0-armv7s', 'Xcode', ios_version='14.4'),
       Toolchain('ios-14-4-dep-10-0-device-cxx14', 'Xcode', ios_version='14.4'),
-      Toolchain('ios-14-4-dep-10-0-device-bitcode-cxx14', 'Xcode', ios_version='14.4'),      
+      Toolchain('ios-14-4-dep-10-0-device-bitcode-cxx14', 'Xcode', ios_version='14.4'),
       Toolchain('ios-14-3-dep-10-0-arm64', 'Xcode', ios_version='14.3'),
       Toolchain('ios-14-3-dep-10-0-armv7', 'Xcode', ios_version='14.3'),
       Toolchain('ios-14-3-dep-10-0-armv7s', 'Xcode', ios_version='14.3'),
@@ -794,6 +799,12 @@ if platform.system() == 'Darwin':
       Toolchain('ios-nocodesign-14-4-dep-10-0', 'Xcode', ios_version='14.4', nocodesign=True),
       Toolchain('ios-nocodesign-14-4-dep-10-0-device-cxx11', 'Xcode', ios_version='14.4', nocodesign=True),
       Toolchain('ios-nocodesign-14-4-dep-10-0-device', 'Xcode', ios_version='14.4', nocodesign=True),
+      Toolchain('ios-nocodesign-14-5-dep-10-0-arm64', 'Xcode', ios_version='14.5', nocodesign=True),
+      Toolchain('ios-nocodesign-14-5-dep-10-0-armv7', 'Xcode', ios_version='14.5', nocodesign=True),
+      Toolchain('ios-nocodesign-14-5-dep-10-0-armv7s', 'Xcode', ios_version='14.5', nocodesign=True),
+      Toolchain('ios-nocodesign-14-5-dep-10-0', 'Xcode', ios_version='14.5', nocodesign=True),
+      Toolchain('ios-nocodesign-14-5-dep-10-0-device-cxx11', 'Xcode', ios_version='14.5', nocodesign=True),
+      Toolchain('ios-nocodesign-14-5-dep-10-0-device', 'Xcode', ios_version='14.5', nocodesign=True),
       Toolchain('ios-nocodesign-dep-9-0-cxx14', 'Xcode', nocodesign=True),
       Toolchain('xcode', 'Xcode'),
       Toolchain('xcode-cxx98', 'Xcode'),
