@@ -19,7 +19,7 @@ set(CMAKE_ANDROID_ARCH_ABI "armeabi-v7a")
 set(CMAKE_ANDROID_ARM_NEON TRUE)
 set(CMAKE_ANDROID_ARM_MODE TRUE) # 32-bit ARM
 set(CMAKE_ANDROID_NDK_TOOLCHAIN_VERSION "clang")
-set(CMAKE_ANDROID_STL_TYPE "c++_static") # LLVM libc++ static
+set(CMAKE_ANDROID_STL_TYPE "c++_shared") # LLVM libc++ static
 
 polly_init(
     "Android NDK ${ANDROID_NDK_VERSION} / \
