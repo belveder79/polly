@@ -18,6 +18,7 @@ class Toolchain:
       arch='',
       vs_version='',
       ios_version='',
+      visionos_version='',
       osx_version='',
       xp=False,
       nocodesign=False,
@@ -28,6 +29,7 @@ class Toolchain:
     self.arch = arch
     self.vs_version = vs_version
     self.ios_version = ios_version
+    self.visionos_version = visionos_version
     self.osx_version = osx_version
     self.is_nmake = (self.generator == 'NMake Makefiles')
     self.is_msvc = self.generator.startswith('Visual Studio')
@@ -545,6 +547,7 @@ if platform.system() == 'Darwin':
       Toolchain('ios', 'Xcode'),
       Toolchain('ios-cxx17', 'Xcode'),
       Toolchain('ios-bitcode', 'Xcode'),
+      Toolchain('visionos-2-0-arm64-cxx14', 'Xcode', visionos_version='2.0'),
       Toolchain('ios-18-0-dep-13-0-arm64-cxx14', 'Xcode', ios_version='18.0'),
       Toolchain('ios-18-0-dep-13-0-device-cxx14', 'Xcode', ios_version='18.0'),
       Toolchain('ios-17-5-dep-13-0-arm64-cxx14', 'Xcode', ios_version='17.5'),
