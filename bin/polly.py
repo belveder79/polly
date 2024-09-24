@@ -16,6 +16,7 @@ import detail.create_framework
 import detail.generate_command
 import detail.get_nmake_environment
 import detail.ios_dev_root
+import detail.visionos_dev_root
 import detail.logging
 import detail.open_project
 import detail.osx_dev_root
@@ -275,6 +276,12 @@ if toolchain_entry.is_nmake or vs_ninja:
   os.environ = detail.get_nmake_environment.get(
       toolchain_entry.arch, toolchain_entry.vs_version
   )
+
+if toolchain_entry.visionos_version:
+  visionos_dev_root = detail.visionos_dev_root.get(toolchain_entry.visionos_version)
+  if visionos_dev_root:
+    print("Set environment DEVELOPER_DIR to {}".format(visionos_dev_root))
+    os.environ['DEVELOPER_DIR'] = visionos_dev_root
 
 if toolchain_entry.ios_version:
   ios_dev_root = detail.ios_dev_root.get(toolchain_entry.ios_version)
