@@ -177,6 +177,12 @@ parser.add_argument(
 )
 
 parser.add_argument(
+    '--visionossim',
+    action='store_true',
+    help="Build for visionos simulator"
+)
+
+parser.add_argument(
     '--jobs',
     type=int,
     help="Number of concurrent build operations"
@@ -463,6 +469,10 @@ build_command.append('--')
 if args.iossim:
   build_command.append('-sdk')
   build_command.append('iphonesimulator')
+
+if args.visionossim:
+  build_command.append('-sdk')
+  build_command.append('xrsimulator')
 
 if args.jobs:
   if toolchain_entry.is_xcode:

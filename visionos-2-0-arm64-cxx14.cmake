@@ -34,7 +34,7 @@ set(CMAKE_MACOSX_BUNDLE YES)
 set(CMAKE_XCODE_ATTRIBUTE_CODE_SIGN_IDENTITY "Apple Development")
 
 set(VISIONOS_ARCHS arm64)
-set(VISIONOSSIMULATOR_ARCHS "")
+set(VISIONOSSIMULATOR_ARCHS arm64)
 
 include("${CMAKE_CURRENT_LIST_DIR}/compiler/xcode.cmake")
 include("${CMAKE_CURRENT_LIST_DIR}/os/visionos.cmake")
