@@ -547,6 +547,7 @@ if platform.system() == 'Darwin':
       Toolchain('ios', 'Xcode'),
       Toolchain('ios-cxx17', 'Xcode'),
       Toolchain('ios-bitcode', 'Xcode'),
+      Toolchain('visionos-2-5-arm64-cxx14', 'Xcode', visionos_version='2.5'),
       Toolchain('visionos-2-0-arm64-cxx14', 'Xcode', visionos_version='2.0'),
       Toolchain('ios-18-5-dep-13-0-arm64-cxx14', 'Xcode', ios_version='18.5'),
       Toolchain('ios-18-5-dep-13-0-device-cxx14', 'Xcode', ios_version='18.5'),
